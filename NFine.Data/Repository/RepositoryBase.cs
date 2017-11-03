@@ -1,10 +1,4 @@
-﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
-*********************************************************************************/
-using NFine.Code;
+﻿using HH.Code;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,14 +10,14 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace NFine.Data
+namespace HH.Data
 {
     /// <summary>
     /// 仓储实现
     /// </summary>
     public class RepositoryBase : IRepositoryBase, IDisposable
     {
-        private NFineDbContext dbcontext = new NFineDbContext();
+        private HHDbContext dbcontext = new HHDbContext();
         private DbTransaction dbTransaction { get; set; }
         public IRepositoryBase BeginTrans()
         {

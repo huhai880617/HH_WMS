@@ -1,17 +1,17 @@
 ﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
+ * Copyright © 2016 HH.Framework 版权所有
+ * Author: HH
+ * Description: HH快速开发平台
+ * Website：http://www.HH.cn
 *********************************************************************************/
-using NFine.Application.SystemManage;
-using NFine.Code;
-using NFine.Domain.Entity.SystemManage;
+using HH.Application.SystemManage;
+using HH.Code;
+using HH.Domain.Entity.SystemManage;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace NFine.Web.Areas.SystemManage.Controllers
+namespace HH.Web.Areas.SystemManage.Controllers
 {
     public class ModuleButtonController : ControllerBase
     {

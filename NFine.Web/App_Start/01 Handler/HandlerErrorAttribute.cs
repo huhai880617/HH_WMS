@@ -1,7 +1,7 @@
-﻿using NFine.Code;
+﻿using HH.Code;
 using System.Web.Mvc;
 
-namespace NFine.Web
+namespace HH.Web
 {
     public class HandlerErrorAttribute : HandleErrorAttribute
     {

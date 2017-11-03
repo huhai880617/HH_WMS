@@ -1,17 +1,17 @@
 ﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
+ * Copyright © 2016 HH.Framework 版权所有
+ * Author: HH
+ * Description: HH快速开发平台
+ * Website：http://www.HH.cn
 *********************************************************************************/
-using NFine.Domain.Entity.SystemManage;
-using NFine.Domain.IRepository.SystemManage;
-using NFine.Repository.SystemManage;
+using HH.Domain.Entity.SystemManage;
+using HH.Domain.IRepository.SystemManage;
+using HH.Repository.SystemManage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NFine.Application.SystemManage
+namespace HH.Application.SystemManage
 {
     public class OrganizeApp
     {

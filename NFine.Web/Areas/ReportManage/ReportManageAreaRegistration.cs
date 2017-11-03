@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace NFine.Web.Areas.ReportManage
+namespace HH.Web.Areas.ReportManage
 {
     public class ReportManageAreaRegistration : AreaRegistration
     {
@@ -18,7 +18,7 @@ namespace NFine.Web.Areas.ReportManage
               this.AreaName + "_Default",
               this.AreaName + "/{controller}/{action}/{id}",
               new { area = this.AreaName, controller = "Home", action = "Index", id = UrlParameter.Optional },
-              new string[] { "NFine.Web.Areas." + this.AreaName + ".Controllers" }
+              new string[] { "HH.Web.Areas." + this.AreaName + ".Controllers" }
             );
         }
     }

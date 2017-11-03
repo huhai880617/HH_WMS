@@ -121,6 +121,8 @@
     <Compile Include="Areas\ExampleManage\Controllers\SendMessagesController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\SignetController.cs" />
     <Compile Include="Areas\ExampleManage\ExampleManageAreaRegistration.cs" />
+    <Compile Include="Areas\ReceiptManage\Contorllers\ReceiptHeaderController.cs" />
+    <Compile Include="Areas\ReceiptManage\ReceiptManageAreaRegistration.cs" />
     <Compile Include="Areas\ReportManage\Controllers\EchartsController.cs" />
     <Compile Include="Areas\ReportManage\Controllers\HighchartsController.cs" />
     <Compile Include="Areas\ReportManage\ReportManageAreaRegistration.cs" />
@@ -426,21 +428,21 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NFine.Application\NFine.Application.csproj">
+    <ProjectReference Include="..\NFine.Application\HH.Application.csproj">
       <Project>{f2035ee2-b73d-4fb8-a433-cab465de6a2a}</Project>
-      <Name>NFine.Application</Name>
+      <Name>HH.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NFine.Code\NFine.Code.csproj">
+    <ProjectReference Include="..\NFine.Code\HH.Code.csproj">
       <Project>{db19ce03-c307-43fe-a209-08aa4ae10e21}</Project>
-      <Name>NFine.Code</Name>
+      <Name>HH.Code</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NFine.Domain\NFine.Domain.csproj">
+    <ProjectReference Include="..\NFine.Domain\HH.Domain.csproj">
       <Project>{7dc886cd-b8a0-44e8-aadd-57fcb0cfecb8}</Project>
-      <Name>NFine.Domain</Name>
+      <Name>HH.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NFine.Mapping\NFine.Mapping.csproj">
+    <ProjectReference Include="..\NFine.Mapping\HH.Mapping.csproj">
       <Project>{4e642cbe-f6c5-4cb9-9474-6b349652fe77}</Project>
-      <Name>NFine.Mapping</Name>
+      <Name>HH.Mapping</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -566,6 +568,7 @@
     <Content Include="Areas\ReportManage\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\ReceiptManage\Views\Receipt\" />
     <Folder Include="Areas\ReportManage\Views\Echarts\" />
   </ItemGroup>
   <ItemGroup>
@@ -620,6 +623,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\SystemManage\Views\User\Info.cshtml" />
+    <Content Include="Areas\ReceiptManage\Views\Web.config" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
   </ItemGroup>
   <PropertyGroup>

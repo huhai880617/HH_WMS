@@ -1,7 +1,7 @@
-﻿using NFine.Code;
+﻿using HH.Code;
 using System.Web.Mvc;
 
-namespace NFine.Web
+namespace HH.Web
 {
     public class HandlerLoginAttribute : AuthorizeAttribute
     {
@@ -18,7 +18,7 @@ namespace NFine.Web
             }
             if (OperatorProvider.Provider.GetCurrent() == null)
             {
-                WebHelper.WriteCookie("nfine_login_error", "overdue");
+                WebHelper.WriteCookie("HH_login_error", "overdue");
                 filterContext.HttpContext.Response.Write("<script>top.location.href = '/Login/Index';</script>");
                 return;
             }

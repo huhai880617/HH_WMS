@@ -1,10 +1,4 @@
-﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
-*********************************************************************************/
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -13,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NFine.Code
+namespace HH.Code
 {
     public class VerifyCode
     {
@@ -36,7 +30,7 @@ namespace NFine.Code
                 chkCode += character[rnd.Next(character.Length)];
             }
             //写入Session、验证码加密
-            WebHelper.WriteSession("nfine_session_verifycode", Md5.md5(chkCode.ToLower(), 16));
+            WebHelper.WriteSession("HH_session_verifycode", Md5.md5(chkCode.ToLower(), 16));
             //创建画布
             Bitmap bmp = new Bitmap(codeW, codeH);
             Graphics g = Graphics.FromImage(bmp);

@@ -1,15 +1,15 @@
 ﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
+ * Copyright © 2016 HH.Framework 版权所有
+ * Author: HH
+ * Description: HH快速开发平台
+ * Website：http://www.HH.cn
 *********************************************************************************/
-using NFine.Application.SystemSecurity;
-using NFine.Code;
-using NFine.Domain.Entity.SystemSecurity;
+using HH.Application.SystemSecurity;
+using HH.Code;
+using HH.Domain.Entity.SystemSecurity;
 using System.Web.Mvc;
 
-namespace NFine.Web.Areas.SystemSecurity.Controllers
+namespace HH.Web.Areas.SystemSecurity.Controllers
 {
     public class DbBackupController : ControllerBase
     {

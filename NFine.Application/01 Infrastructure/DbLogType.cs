@@ -1,8 +1,8 @@
 ﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
+ * Copyright © 2016 HH.Framework 版权所有
+ * Author: HH
+ * Description: HH快速开发平台
+ * Website：http://www.HH.cn
 *********************************************************************************/
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NFine.Application
+namespace HH.Application
 {
     public enum DbLogType
     {

@@ -1,17 +1,12 @@
-﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
-*********************************************************************************/
-using NFine.Code;
-using NFine.Data;
-using NFine.Data.Extensions;
-using NFine.Domain.Entity.SystemSecurity;
-using NFine.Domain.IRepository.SystemSecurity;
-using NFine.Repository.SystemSecurity;
+﻿
+using HH.Code;
+using HH.Data;
+using HH.Data.Extensions;
+using HH.Domain.Entity.SystemSecurity;
+using HH.Domain.IRepository.SystemSecurity;
+using HH.Repository.SystemSecurity;
 
-namespace NFine.Repository.SystemSecurity
+namespace HH.Repository.SystemSecurity
 {
     public class DbBackupRepository : RepositoryBase<DbBackupEntity>, IDbBackupRepository
     {

@@ -1,5 +1,5 @@
 (function ($) {
-    $.nfinetab = {
+    $.HHtab = {
         requestFullScreen: function () {
             var de = document.documentElement;
             if (de.requestFullscreen) {
@@ -22,7 +22,7 @@
         },
         refreshTab: function () {
             var currentId = $('.page-tabs-content').find('.active').attr('data-id');
-            var target = $('.NFine_iframe[data-id="' + currentId + '"]');
+            var target = $('.HH_iframe[data-id="' + currentId + '"]');
             var url = target.attr('src');
             $.loading(true);
             target.attr('src', url).load(function () {
@@ -33,21 +33,21 @@
             var currentId = $(this).data('id');
             if (!$(this).hasClass('active')) {
                 //-----新增修改代码 -------
-                top.$.cookie('nfine_currentmoduleid', $(this).data('realid'), { path: "/" });
+                top.$.cookie('HH_currentmoduleid', $(this).data('realid'), { path: "/" });
                 //-------------------------
-                $('.mainContent .NFine_iframe').each(function () {
+                $('.mainContent .HH_iframe').each(function () {
                     if ($(this).data('id') == currentId) {
-                        $(this).show().siblings('.NFine_iframe').hide();
+                        $(this).show().siblings('.HH_iframe').hide();
                         return false;
                     }
                 });
                 $(this).addClass('active').siblings('.menuTab').removeClass('active');
-                $.nfinetab.scrollToTab(this);
+                $.HHtab.scrollToTab(this);
             }
         },
         closeOtherTabs: function () {
             $('.page-tabs-content').children("[data-id]").find('.fa-remove').parents('a').not(".active").each(function () {
-                $('.NFine_iframe[data-id="' + $(this).data('id') + '"]').remove();
+                $('.HH_iframe[data-id="' + $(this).data('id') + '"]').remove();
                 $(this).remove();
             });
             $('.page-tabs-content').css("margin-left", "0");
@@ -59,9 +59,9 @@
                 if ($(this).parents('.menuTab').next('.menuTab').size()) {
                     var activeId = $(this).parents('.menuTab').next('.menuTab:eq(0)').data('id');
                     $(this).parents('.menuTab').next('.menuTab:eq(0)').addClass('active');
-                    $('.mainContent .NFine_iframe').each(function () {
+                    $('.mainContent .HH_iframe').each(function () {
                         if ($(this).data('id') == activeId) {
-                            $(this).show().siblings('.NFine_iframe').hide();
+                            $(this).show().siblings('.HH_iframe').hide();
                             return false;
                         }
                     });
@@ -72,7 +72,7 @@
                         }, "fast");
                     }
                     $(this).parents('.menuTab').remove();
-                    $('.mainContent .NFine_iframe').each(function () {
+                    $('.mainContent .HH_iframe').each(function () {
                         if ($(this).data('id') == closeTabId) {
                             $(this).remove();
                             return false;
@@ -82,14 +82,14 @@
                 if ($(this).parents('.menuTab').prev('.menuTab').size()) {
                     var activeId = $(this).parents('.menuTab').prev('.menuTab:last').data('id');
                     $(this).parents('.menuTab').prev('.menuTab:last').addClass('active');
-                    $('.mainContent .NFine_iframe').each(function () {
+                    $('.mainContent .HH_iframe').each(function () {
                         if ($(this).data('id') == activeId) {
-                            $(this).show().siblings('.NFine_iframe').hide();
+                            $(this).show().siblings('.HH_iframe').hide();
                             return false;
                         }
                     });
                     $(this).parents('.menuTab').remove();
-                    $('.mainContent .NFine_iframe').each(function () {
+                    $('.mainContent .HH_iframe').each(function () {
                         if ($(this).data('id') == closeTabId) {
                             $(this).remove();
                             return false;
@@ -99,13 +99,13 @@
             }
             else {
                 $(this).parents('.menuTab').remove();
-                $('.mainContent .NFine_iframe').each(function () {
+                $('.mainContent .HH_iframe').each(function () {
                     if ($(this).data('id') == closeTabId) {
                         $(this).remove();
                         return false;
                     }
                 });
-                $.nfinetab.scrollToTab($('.menuTab.active'));
+                $.HHtab.scrollToTab($('.menuTab.active'));
             }
             return false;
         },
@@ -113,7 +113,7 @@
             $("#header-nav>ul>li.open").removeClass("open");
             var dataId = $(this).attr('data-id');
             if (dataId != "") {
-                top.$.cookie('nfine_currentmoduleid', dataId, { path: "/" });
+                top.$.cookie('HH_currentmoduleid', dataId, { path: "/" });
             }
             var dataUrl = $(this).attr('href');
             var menuName = $.trim($(this).text());
@@ -125,10 +125,10 @@
                 if ($(this).data('id') == dataUrl) {
                     if (!$(this).hasClass('active')) {
                         $(this).addClass('active').siblings('.menuTab').removeClass('active');
-                        $.nfinetab.scrollToTab(this);
-                        $('.mainContent .NFine_iframe').each(function () {
+                        $.HHtab.scrollToTab(this);
+                        $('.mainContent .HH_iframe').each(function () {
                             if ($(this).data('id') == dataUrl) {
-                                $(this).show().siblings('.NFine_iframe').hide();
+                                $(this).show().siblings('.HH_iframe').hide();
                                 return false;
                             }
                         });
@@ -142,21 +142,21 @@
                 // 修改代码 多个窗口打开后操作权限问题
                 var str = '<a href="javascript:;" class="active menuTab" data-id="' + dataUrl + '" data-realid="' + dataId + '">' + menuName + ' <i class="fa fa-remove"></i></a>';
                 $('.menuTab').removeClass('active');
-                var str1 = '<iframe class="NFine_iframe" id="iframe' + dataId + '" name="iframe' + dataId + '"  width="100%" height="100%" src="' + dataUrl + '" frameborder="0" data-id="' + dataUrl + '" seamless></iframe>';
-                $('.mainContent').find('iframe.NFine_iframe').hide();
+                var str1 = '<iframe class="HH_iframe" id="iframe' + dataId + '" name="iframe' + dataId + '"  width="100%" height="100%" src="' + dataUrl + '" frameborder="0" data-id="' + dataUrl + '" seamless></iframe>';
+                $('.mainContent').find('iframe.HH_iframe').hide();
                 $('.mainContent').append(str1);
                 $.loading(true);
                 $('.mainContent iframe:visible').load(function () {
                     $.loading(false);
                 });
                 $('.menuTabs .page-tabs-content').append(str);
-                $.nfinetab.scrollToTab($('.menuTab.active'));
+                $.HHtab.scrollToTab($('.menuTab.active'));
             }
             return false;
         },
         scrollTabRight: function () {
             var marginLeftVal = Math.abs(parseInt($('.page-tabs-content').css('margin-left')));
-            var tabOuterWidth = $.nfinetab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
+            var tabOuterWidth = $.HHtab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
             var visibleWidth = $(".content-tabs").outerWidth(true) - tabOuterWidth;
             var scrollVal = 0;
             if ($(".page-tabs-content").width() < visibleWidth) {
@@ -173,7 +173,7 @@
                     offsetVal += $(tabElement).outerWidth(true);
                     tabElement = $(tabElement).next();
                 }
-                scrollVal = $.nfinetab.calSumWidth($(tabElement).prevAll());
+                scrollVal = $.HHtab.calSumWidth($(tabElement).prevAll());
                 if (scrollVal > 0) {
                     $('.page-tabs-content').animate({
                         marginLeft: 0 - scrollVal + 'px'
@@ -183,7 +183,7 @@
         },
         scrollTabLeft: function () {
             var marginLeftVal = Math.abs(parseInt($('.page-tabs-content').css('margin-left')));
-            var tabOuterWidth = $.nfinetab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
+            var tabOuterWidth = $.HHtab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
             var visibleWidth = $(".content-tabs").outerWidth(true) - tabOuterWidth;
             var scrollVal = 0;
             if ($(".page-tabs-content").width() < visibleWidth) {
@@ -196,12 +196,12 @@
                     tabElement = $(tabElement).next();
                 }
                 offsetVal = 0;
-                if ($.nfinetab.calSumWidth($(tabElement).prevAll()) > visibleWidth) {
+                if ($.HHtab.calSumWidth($(tabElement).prevAll()) > visibleWidth) {
                     while ((offsetVal + $(tabElement).outerWidth(true)) < (visibleWidth) && tabElement.length > 0) {
                         offsetVal += $(tabElement).outerWidth(true);
                         tabElement = $(tabElement).prev();
                     }
-                    scrollVal = $.nfinetab.calSumWidth($(tabElement).prevAll());
+                    scrollVal = $.HHtab.calSumWidth($(tabElement).prevAll());
                 }
             }
             $('.page-tabs-content').animate({
@@ -209,8 +209,8 @@
             }, "fast");
         },
         scrollToTab: function (element) {
-            var marginLeftVal = $.nfinetab.calSumWidth($(element).prevAll()), marginRightVal = $.nfinetab.calSumWidth($(element).nextAll());
-            var tabOuterWidth = $.nfinetab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
+            var marginLeftVal = $.HHtab.calSumWidth($(element).prevAll()), marginRightVal = $.HHtab.calSumWidth($(element).nextAll());
+            var tabOuterWidth = $.HHtab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
             var visibleWidth = $(".content-tabs").outerWidth(true) - tabOuterWidth;
             var scrollVal = 0;
             if ($(".page-tabs-content").outerWidth() < visibleWidth) {
@@ -239,27 +239,27 @@
             return width;
         },
         init: function () {
-            $('.menuItem').on('click', $.nfinetab.addTab);
-            $('.menuTabs').on('click', '.menuTab i', $.nfinetab.closeTab);
-            $('.menuTabs').on('click', '.menuTab', $.nfinetab.activeTab);
-            $('.tabLeft').on('click', $.nfinetab.scrollTabLeft);
-            $('.tabRight').on('click', $.nfinetab.scrollTabRight);
-            $('.tabReload').on('click', $.nfinetab.refreshTab);
+            $('.menuItem').on('click', $.HHtab.addTab);
+            $('.menuTabs').on('click', '.menuTab i', $.HHtab.closeTab);
+            $('.menuTabs').on('click', '.menuTab', $.HHtab.activeTab);
+            $('.tabLeft').on('click', $.HHtab.scrollTabLeft);
+            $('.tabRight').on('click', $.HHtab.scrollTabRight);
+            $('.tabReload').on('click', $.HHtab.refreshTab);
             $('.tabCloseCurrent').on('click', function () {
                 $('.page-tabs-content').find('.active i').trigger("click");
             });
             $('.tabCloseAll').on('click', function () {
                 $('.page-tabs-content').children("[data-id]").find('.fa-remove').each(function () {
-                    $('.NFine_iframe[data-id="' + $(this).data('id') + '"]').remove();
+                    $('.HH_iframe[data-id="' + $(this).data('id') + '"]').remove();
                     $(this).parents('a').remove();
                 });
                 $('.page-tabs-content').children("[data-id]:first").each(function () {
-                    $('.NFine_iframe[data-id="' + $(this).data('id') + '"]').show();
+                    $('.HH_iframe[data-id="' + $(this).data('id') + '"]').show();
                     $(this).addClass("active");
                 });
                 $('.page-tabs-content').css("margin-left", "0");
             });
-            $('.tabCloseOther').on('click', $.nfinetab.closeOtherTabs);
+            $('.tabCloseOther').on('click', $.HHtab.closeOtherTabs);
             $('.fullscreen').on('click', function () {
                 if (!$(this).attr('fullscreen')) {
                     $(this).attr('fullscreen', 'true');
@@ -272,6 +272,6 @@
         }
     };
     $(function () {
-        $.nfinetab.init();
+        $.HHtab.init();
     });
 })(jQuery);

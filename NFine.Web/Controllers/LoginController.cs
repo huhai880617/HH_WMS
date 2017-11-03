@@ -1,22 +1,22 @@
 ﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
+ * Copyright © 2016 HH.Framework 版权所有
+ * Author: HH
+ * Description: HH快速开发平台
+ * Website：http://www.HH.cn
 *********************************************************************************/
-using NFine.Domain.Entity.SystemSecurity;
-using NFine.Application.SystemSecurity;
+using HH.Domain.Entity.SystemSecurity;
+using HH.Application.SystemSecurity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using NFine.Domain.Entity.SystemManage;
-using NFine.Application.SystemManage;
-using NFine.Code;
-using NFine.Application;
+using HH.Domain.Entity.SystemManage;
+using HH.Application.SystemManage;
+using HH.Code;
+using HH.Application;
 
-namespace NFine.Web.Controllers
+namespace HH.Web.Controllers
 {
     public class LoginController : Controller
     {
@@ -57,7 +57,7 @@ namespace NFine.Web.Controllers
             logEntity.F_Type = DbLogType.Login.ToString();
             try
             {
-                if (Session["nfine_session_verifycode"].IsEmpty() || Md5.md5(code.ToLower(), 16) != Session["nfine_session_verifycode"].ToString())
+                if (Session["HH_session_verifycode"].IsEmpty() || Md5.md5(code.ToLower(), 16) != Session["HH_session_verifycode"].ToString())
                 {
                     throw new Exception("验证码错误，请重新输入");
                 }

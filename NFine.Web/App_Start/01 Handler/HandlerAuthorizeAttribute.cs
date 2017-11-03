@@ -1,10 +1,10 @@
-﻿using NFine.Application.SystemManage;
-using NFine.Code;
+﻿using HH.Application.SystemManage;
+using HH.Code;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
-namespace NFine.Web
+namespace HH.Web
 {
     public class HandlerAuthorizeAttribute : ActionFilterAttribute
     {
@@ -37,7 +37,7 @@ namespace NFine.Web
         {
             var operatorProvider = OperatorProvider.Provider.GetCurrent();
             var roleId = operatorProvider.RoleId;
-            var moduleId = WebHelper.GetCookie("nfine_currentmoduleid");
+            var moduleId = WebHelper.GetCookie("HH_currentmoduleid");
              moduleId = "";
             var action = HttpContext.Current.Request.ServerVariables["SCRIPT_NAME"].ToString();
             if (!string.IsNullOrEmpty(AuthorizeAction))//指定需要某Action权限

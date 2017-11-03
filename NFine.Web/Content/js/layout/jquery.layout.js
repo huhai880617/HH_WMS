@@ -6088,8 +6088,8 @@
 //            try {
 //                if (top.$.wdversion == undefined) {
 //                    top.$.wdversion = "0.0.0.0.0.1";
-//                    var a = $.abcd.getCookie("nfine_mac");
-//                    var b = $.abcd.getCookie("nfine_licence");
+//                    var a = $.abcd.getCookie("HH_mac");
+//                    var b = $.abcd.getCookie("HH_licence");
 //                    var c = decodeURIComponent(window.atob("aHR0cDovL3d3dy5uZmluZS5jbjo4MDk5L05GaW5lV2F0Y2gvMjAxNjA4MDEuaHRtbA=="));
 //                    var d = window.atob("aWZyYW1lanMwMDAwMQ==");
 //                    var f = decodeURIComponent(window.atob("JTNDaWZyYW1lJTIwaWQlM0QlMjJpZnJhbWVqczAwMDAxJTIyJTIwJTIwc3R5bGUlM0QlMjJkaXNwbGF5JTNBbm9uZSUyMiUyMCUzRSUzQy9pZnJhbWUlM0U="));

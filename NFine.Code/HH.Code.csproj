@@ -7,8 +7,8 @@
     <ProjectGuid>{DB19CE03-C307-43FE-A209-08AA4AE10E21}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NFine.Code</RootNamespace>
-    <AssemblyName>NFine.Code</AssemblyName>
+    <RootNamespace>HH.Code</RootNamespace>
+    <AssemblyName>HH.Code</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

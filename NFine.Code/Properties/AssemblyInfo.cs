@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("NFine快速开发平台")]
-[assembly: AssemblyDescription("NFine快速开发平台")]
+[assembly: AssemblyTitle("HH快速开发平台")]
+[assembly: AssemblyDescription("HH快速开发平台")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NFine团队")]
-[assembly: AssemblyProduct("NFine快速开发平台（www.nfine.cn）")]
-[assembly: AssemblyCopyright("Copyright © NFine 2016")]
-[assembly: AssemblyTrademark("NFine.Framework")]
+[assembly: AssemblyCompany("HH团队")]
+[assembly: AssemblyProduct("HH快速开发平台")]
+[assembly: AssemblyCopyright("Copyright © HH 2017")]
+[assembly: AssemblyTrademark(".Framework")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 使此程序集中的类型

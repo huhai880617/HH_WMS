@@ -1,17 +1,11 @@
-﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
-*********************************************************************************/
-using NFine.Code;
+﻿using HH.Code;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace NFine.Web.Areas.ExampleManage.Controllers
+namespace HH.Web.Areas.ExampleManage.Controllers
 {
     public class SendMailController : ControllerBase
     {
@@ -25,7 +19,7 @@ namespace NFine.Web.Areas.ExampleManage.Controllers
             mail.MailServer = Configs.GetValue("MailHost");
             mail.MailUserName = Configs.GetValue("MailUserName");
             mail.MailPassword = Configs.GetValue("MailPassword");
-            mail.MailName = "NFine快速开发平台";
+            mail.MailName = "HH快速开发平台";
             mail.Send(account, title, content);
             return Success("发送成功。");
         }

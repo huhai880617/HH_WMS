@@ -1,18 +1,18 @@
 ﻿/*******************************************************************************
- * Copyright © 2016 NFine.Framework 版权所有
- * Author: NFine
- * Description: NFine快速开发平台
- * Website：http://www.nfine.cn
+ * Copyright © 2016 HH.Framework 版权所有
+ * Author: HH
+ * Description: HH快速开发平台
+ * Website：http://www.HH.cn
 *********************************************************************************/
-using NFine.Application.SystemSecurity;
-using NFine.Code;
+using HH.Application.SystemSecurity;
+using HH.Code;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace NFine.Web.Areas.SystemSecurity.Controllers
+namespace HH.Web.Areas.SystemSecurity.Controllers
 {
     public class LogController : ControllerBase
     {
