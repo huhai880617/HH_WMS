@@ -14,6 +14,8 @@ using System.Text;
 using HH.Domain.Entity.ReceiptManage;
 using HH.Domain.IRepository.ReceiptManage;
 using HH.Repository.ReceiptManage;
+using System.Linq.Expressions;
+
 namespace HH.Application.ReceiptManage
 {
     /// <summary>
@@ -30,17 +32,38 @@ namespace HH.Application.ReceiptManage
         {
             return service.IQueryable().ToList();
         }
-
+        /// <summary>
+        /// 获取符合lamada 表达式的头表数据
+        /// </summary>
+        /// <param name="predicate"></param>
+        /// <returns></returns>
+        public List<ReceiptHeaderEntity> GetList( Expression<Func<ReceiptHeaderEntity, bool>> predicate)
+        {
+            return service.IQueryable(predicate).ToList();
+        }
+        /// <summary>
+        /// 根据主键从数据源获取Entity 
+        /// </summary>
+        /// <param name="keyValue">主键</param>
+        /// <returns></returns>
         public ReceiptHeaderEntity GetForm(string keyValue)
         {
             return service.FindEntity(keyValue);
         }
-
+        /// <summary>
+        /// 根据Entity 从数据删除单条记录
+        /// </summary>
+        /// <param name="entity"></param>
         public void Delete(ReceiptHeaderEntity entity)
         {
             service.Delete(entity);
         }
 
+        /// <summary>
+        /// 新增/修改 数据记录
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="keyValue"></param>
         public void SubmitForm(ReceiptHeaderEntity entity, string keyValue)
         {
             if (!string.IsNullOrEmpty(keyValue))

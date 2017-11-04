@@ -436,6 +436,10 @@
       <Project>{db19ce03-c307-43fe-a209-08aa4ae10e21}</Project>
       <Name>HH.Code</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NFine.Data\HH.Data.csproj">
+      <Project>{f71003e8-a836-48f4-9df6-df9095cebd18}</Project>
+      <Name>HH.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NFine.Domain\HH.Domain.csproj">
       <Project>{7dc886cd-b8a0-44e8-aadd-57fcb0cfecb8}</Project>
       <Name>HH.Domain</Name>
@@ -568,7 +572,6 @@
     <Content Include="Areas\ReportManage\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\ReceiptManage\Views\Receipt\" />
     <Folder Include="Areas\ReportManage\Views\Echarts\" />
   </ItemGroup>
   <ItemGroup>
@@ -624,6 +627,9 @@
   <ItemGroup>
     <Content Include="Areas\SystemManage\Views\User\Info.cshtml" />
     <Content Include="Areas\ReceiptManage\Views\Web.config" />
+    <Content Include="Areas\ReceiptManage\Views\Receipt\Details.cshtml" />
+    <Content Include="Areas\ReceiptManage\Views\Receipt\Form.cshtml" />
+    <Content Include="Areas\ReceiptManage\Views\Receipt\Index.cshtml" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
   </ItemGroup>
   <PropertyGroup>

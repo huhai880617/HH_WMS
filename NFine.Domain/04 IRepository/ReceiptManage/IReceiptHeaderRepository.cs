@@ -22,7 +22,7 @@ namespace HH.Domain.IRepository.ReceiptManage
     /// </summary>	
     public interface IReceiptHeaderRepository : IRepositoryBase<ReceiptHeaderEntity>
     {
-
+        
     }
 }
 

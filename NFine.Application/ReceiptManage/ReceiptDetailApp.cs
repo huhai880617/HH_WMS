@@ -14,6 +14,8 @@ using System.Text;
 using HH.Domain.Entity.ReceiptManage;
 using HH.Domain.IRepository.ReceiptManage;
 using HH.Repository.ReceiptManage;
+using System.Linq.Expressions;
+
 namespace HH.Application.ReceiptManage
 {
     /// <summary>
@@ -23,9 +25,15 @@ namespace HH.Application.ReceiptManage
     {
         private IReceiptDetailRepository service = new ReceiptDetailRepository();
 
-        public List<ReceiptDetailEntity> GetList()
+        /// <summary>
+        /// 根据头表的主键标识 查询明细信息
+        /// </summary>
+        /// <param name="headerId"></param>
+        /// <returns></returns>
+        public List<ReceiptDetailEntity> GetList(string headerId)
         {
-            return service.IQueryable().ToList();
+            Expression<Func<ReceiptDetailEntity, bool>> predicate = t => t.F_ReceiptId == headerId;
+            return service.IQueryable(predicate).ToList();
         }
 
         public ReceiptDetailEntity GetForm(string keyValue)

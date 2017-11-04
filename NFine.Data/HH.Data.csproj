@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="DBContext\HHDbContext.cs" />
     <Compile Include="Extensions\DbHelper.cs" />
+    <Compile Include="Extensions\DynamicLambda.cs" />
     <Compile Include="Extensions\EntityInterfaceExtensions.cs" />
     <Compile Include="Repository\IRepositoryBase.cs" />
     <Compile Include="Repository\IRepositoryBase.T.cs" />
