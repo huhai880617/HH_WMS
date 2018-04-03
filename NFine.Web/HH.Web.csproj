@@ -161,8 +161,6 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\weathericons-regular-webfont.svg" />
     <Content Include="Content\img\ajax-loader.gif" />
-    <Content Include="Content\img\alipay.jpg" />
-    <Content Include="Content\img\alipayimg.png" />
     <Content Include="Content\img\button_pm_close.png" />
     <Content Include="Content\img\cy-reward-title-bg.jpg" />
     <Content Include="Content\img\loading.gif" />
@@ -188,10 +186,6 @@
     <Content Include="Content\img\samples\scarlet-159.png" />
     <Content Include="Content\img\samples\scarlet.png" />
     <Content Include="Content\img\samples\scarlett-300.jpg" />
-    <Content Include="Content\img\signet.gif" />
-    <Content Include="Content\img\wechat.jpg" />
-    <Content Include="Content\img\weipayimg.png" />
-    <Content Include="Content\img\weixin_nfine.png" />
     <Content Include="Content\js\bootstrap\bootstrap.js" />
     <Content Include="Content\js\bootstrap\bootstrap.min.css" />
     <Content Include="Content\js\charts\Chart.js" />
@@ -381,6 +375,7 @@
     <Content Include="Content\js\zsign\signet.gif" />
     <Content Include="Global.asax" />
     <Content Include="Index.htm" />
+    <Content Include="Remark.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

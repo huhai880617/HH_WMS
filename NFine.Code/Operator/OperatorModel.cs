@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HH.Code
 {
@@ -16,5 +17,7 @@ namespace HH.Code
         public string LoginToken { get; set; }
         public DateTime LoginTime { get; set; }
         public bool IsSystem { get; set; }
+        public string WarehouseCode { get; set; }
+        public List<string> WarehouseCodes { get; set; }
     }
 }
