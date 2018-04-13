@@ -121,6 +121,7 @@
     <Compile Include="Areas\ExampleManage\Controllers\SendMessagesController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\SignetController.cs" />
     <Compile Include="Areas\ExampleManage\ExampleManageAreaRegistration.cs" />
+    <Compile Include="Areas\ReceiptManage\Contorllers\ReceiptHeaderController.cs" />
     <Compile Include="Areas\ReceiptManage\ReceiptManageAreaRegistration.cs" />
     <Compile Include="Areas\ReportManage\Controllers\EchartsController.cs" />
     <Compile Include="Areas\ReportManage\Controllers\HighchartsController.cs" />
@@ -566,7 +567,6 @@
     <Content Include="Areas\ReportManage\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\ReceiptManage\Contorllers\" />
     <Folder Include="Areas\ReportManage\Views\Echarts\" />
   </ItemGroup>
   <ItemGroup>
@@ -622,9 +622,10 @@
   <ItemGroup>
     <Content Include="Areas\SystemManage\Views\User\Info.cshtml" />
     <Content Include="Areas\ReceiptManage\Views\Web.config" />
-    <Content Include="Areas\ReceiptManage\Views\Receipt\Details.cshtml" />
-    <Content Include="Areas\ReceiptManage\Views\Receipt\Form.cshtml" />
-    <Content Include="Areas\ReceiptManage\Views\Receipt\Index.cshtml" />
+    <Content Include="Areas\ReceiptManage\Views\ReceiptHeader\Details.cshtml" />
+    <Content Include="Areas\ReceiptManage\Views\ReceiptHeader\Form.cshtml" />
+    <Content Include="Areas\ReceiptManage\Views\ReceiptHeader\Index1.cshtml" />
+    <Content Include="Areas\ReceiptManage\Views\ReceiptHeader\Index.cshtml" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
   </ItemGroup>
   <PropertyGroup>

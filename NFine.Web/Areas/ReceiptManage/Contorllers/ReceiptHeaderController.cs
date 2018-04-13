@@ -10,7 +10,7 @@ using System;
 
 namespace HH.Web.Areas.ReceiptManage.Controllers
 {
-    public class ItemsDataController : ControllerBase
+    public class ReceiptHeaderController : ControllerBase
     {
         private ReceiptHeaderApp receiptHeaderApp = new ReceiptHeaderApp();
         private ReceiptDetailApp receiptDetailApp = new ReceiptDetailApp();
@@ -44,12 +44,12 @@ namespace HH.Web.Areas.ReceiptManage.Controllers
         [HandlerAjaxOnly]
         public ActionResult GetSelectJson(string enCode)
         {
-            var data = receiptHeaderApp.GetItemList(enCode);
+           // var data = receiptHeaderApp.GetItemList(enCode);
             List<object> list = new List<object>();
-            foreach (ReceiptHeaderEntity item in data)
-            {
-                list.Add(new { id = item.F_ItemCode, text = item.F_ItemName });
-            }
+            //foreach (ReceiptHeaderEntity item in data)
+            //{
+            //    list.Add(new { id = item.F_ItemCode, text = item.F_ItemName });
+            //}
             return Content(list.ToJson());
         }
         [HttpGet]
