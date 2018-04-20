@@ -624,9 +624,9 @@
     <Content Include="Areas\ReceiptManage\Views\Web.config" />
     <Content Include="Areas\ReceiptManage\Views\ReceiptHeader\Details.cshtml" />
     <Content Include="Areas\ReceiptManage\Views\ReceiptHeader\Form.cshtml" />
-    <Content Include="Areas\ReceiptManage\Views\ReceiptHeader\Index1.cshtml" />
     <Content Include="Areas\ReceiptManage\Views\ReceiptHeader\Index.cshtml" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
+    <Content Include="Views\Shared\_BussinessIndex.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

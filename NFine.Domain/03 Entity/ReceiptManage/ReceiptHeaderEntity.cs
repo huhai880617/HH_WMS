@@ -38,6 +38,9 @@ namespace HH.Domain.Entity.ReceiptManage
         public string F_WarehouseCode { get; set; }
         public string F_LinkCode { get; set; }
         public string F_ReceiptType { get; set; }
+        public string F_SupplierCode { get; set; }
+        public string F_SupplierName { get; set; }
+        public DateTime? F_AppointmentTime { get; set; }
         public string F_WaveId { get; set; }
         public string F_Status { get; set; }
     }

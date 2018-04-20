@@ -2,13 +2,14 @@
     ViewBag.Title = "Form";
     Layout = "~/Views/Shared/_Form.cshtml";
 }
+
 <script>
     var keyValue = $.request("keyValue");
     var itemId = $.request("itemId");
     $(function () {
         if (!!keyValue) {
             $.ajax({
-                url: "/SystemManage/ItemsData/GetFormJson",
+                url: "/ReceiptManage/ReceiptHeader/GetFormJson",
                 data: { keyValue: keyValue },
                 dataType: "json",
                 async: false,
@@ -18,6 +19,10 @@
             });
         }
     });
+    //查询基础数据
+    
+
+    // 提交功能
     function submitForm() {
         if (!$('#form1').formValid()) {
             return false;
@@ -25,7 +30,7 @@
         var postData = $("#form1").formSerialize();
         postData["F_ItemId"] = itemId;
         $.submitForm({
-            url: "/SystemManage/ItemsData/SubmitForm?keyValue=" + keyValue,
+            url: "/ReceiptManage/ReceiptHeader/SubmitForm?keyValue=" + keyValue,
             param: postData,
             success: function () {
                 $.currentWindow().$("#gridList").trigger("reloadGrid");
@@ -38,24 +43,42 @@
     <div style="padding-top: 20px; margin-right: 20px;">
         <table class="form">
             <tr>
-                <th class="formTitle">名称</th>
+                <th class="formTitle">单号</th>
                 <td class="formValue">
-                    <input id="F_ItemName" name="F_ItemName" type="text" class="form-control required" placeholder="请输入名称" />
+                    <input id="F_Code" name="F_Code" type="text" class="form-control required" placeholder="请输入单据单号" />
                 </td>
             </tr>
             <tr>
-                <th class="formTitle">编号</th>
+                <th class="formTitle">类型</th>
                 <td class="formValue">
-                    <input id="F_ItemCode" name="F_ItemCode" type="text" class="form-control required" placeholder="请输入编号" />
+                    <input id="F_ReceiptType" name="F_ReceiptType" type="text" class="form-control required" placeholder="请输入单据类型" />
                 </td>
             </tr>
             <tr>
-                <th class="formTitle">排序</th>
+                <th class="formTitle">链接单号</th>
                 <td class="formValue">
-                    <input id="F_SortCode" name="F_SortCode" type="text" class="form-control required" />
+                    <input id="F_LinkCode" name="F_LinkCode" type="text" class="form-control required" placeholder="请输入单据类型" />
                 </td>
             </tr>
             <tr>
+                <th class="formTitle">客户编码</th>
+                <td class="formValue">
+                    <input id="F_SupplierCode" name="F_SupplierCode" type="text" class="form-control required" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">客户名称</th>
+                <td class="formValue">
+                    <input id="F_SupplierName" name="F_SupplierName" type="text" class="form-control " />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">预约入库时间</th>
+                <td class="formValue">
+                    <input id="F_AppointmentTime" name="F_AppointmentTime" type="text" class="form-control " />
+                </td>
+            </tr>
+            @*<tr>
                 <th class="formTitle" style="height: 35px;">选项</th>
                 <td class="formValue" style="padding-top: 1px;">
                     <div class="ckbox">
@@ -72,7 +95,7 @@
                 <td class="formValue">
                     <textarea id="F_Description" name="F_Description" class="form-control" style="height: 60px;"></textarea>
                 </td>
-            </tr>
+            </tr>*@
         </table>
     </div>
 </form>
